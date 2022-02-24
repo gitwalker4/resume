@@ -1,46 +1,92 @@
+* {box-sizing: border-box;}
+
 /*--- Header Styles ---*/
 
 .resume-bg {
-  background: linear-gradient(65deg, #52bab3, #354687, #444);
-  background-size: 300% 300%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   box-shadow: 0px 0px 5px black;
-  animation: header-move 10s ease-in-out infinite;
-} .resume-bg h1 {
-  font-family: 'Lobster', cursive;
-  letter-spacing: 5px;
+  background-color: rgb(25, 6, 46);
+}
+
+.resume-bg h1 {
+  letter-spacing: 2px;
+  margin: 0;
 } 
 
-@keyframes header-move {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+header > div > p {
+  font-size: 1rem;
+}
+
+.professional p {
+  margin-bottom: 0px;
+  font-size: 1rem;
 }
 
 /*--- Body Styles ---*/
 
-body {
-  font-size: 16px;
+#body {
+  font-size: 14px;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  min-width: 1024px;
 }
 
-.company {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.roles {
+.job-card {
+  margin-bottom: 3rem;
+}
+
+.work-history {
+  border-left: 1px solid black;
+}
+
+.skills-title,
+.edu-title,
+.work-title,
+.contact-title,
+.summ-title {
+  font-weight: 600;
+  border-bottom: 2px solid lightgray;
+}
+
+.education,
+.contact,
+#skills {
+  text-align: right;
+}
+
+
+#skills {
+  font-size: 1rem;
+}
+
+.skills-list {
   list-style: none;
-  padding-left: 0px;
+  padding-left: 2rem;
 }
 
 .roles li {
-  padding-bottom: 1rem;
+  padding-bottom: 0.2rem;
+}
+
+aside p {
+  margin-bottom: 0px;
+}
+
+.school,
+.major,
+.contact {
+  font-size: 1rem;
+}
+
+@media print {
+  * {
+    font-size: 0.7rem;
+  }
 }

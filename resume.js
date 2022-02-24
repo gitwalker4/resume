@@ -16,7 +16,7 @@ const Skills = (props) => {
   return (
     <div>
       <h4 className="skills-title">SKILLS</h4>
-      <ul className="skills-list">
+      <ul className="skills-list d-flex flex-wrap justify-content-around d-lg-inline">
           {
             props.skills.map( skill =>
               <li key={ skill }>{ skill }</li>
@@ -46,7 +46,7 @@ const schools = [
 
 const Schools = (props) => {
   return (
-    <div className="my-3">
+    <div className="my-1 school-group">
       <p className="fs-6 fw-bold">{ props.school }</p>
       <p>{ props.major }</p>
       <p>{ props.time }</p>

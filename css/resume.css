@@ -27,7 +27,6 @@ header > div > p {
 #body {
   font-size: 14px;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
-  min-width: 1024px;
 }
 
 
@@ -42,10 +41,6 @@ header > div > p {
   margin-bottom: 3rem;
 }
 
-.work-history {
-  border-left: 1px solid black;
-}
-
 .skills-title,
 .edu-title,
 .work-title,
@@ -58,9 +53,21 @@ header > div > p {
 .education,
 .contact,
 #skills {
-  text-align: right;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
+.contact,
+.education {
+  margin-bottom: 1.5rem;
+}
+
+.school-group {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
 
 #skills {
   font-size: 1rem;
@@ -68,7 +75,12 @@ header > div > p {
 
 .skills-list {
   list-style: none;
-  padding-left: 2rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+.skills-list li {
+  padding-left: 0.5rem;
 }
 
 .roles li {
@@ -85,8 +97,42 @@ aside p {
   font-size: 1rem;
 }
 
-@media print {
-  * {
-    font-size: 0.7rem;
+@media (min-width: 768px) { 
+  .education,
+  .contact,
+  #skills {
+    padding-right: 0.75rem;
+  }
+
+  .contact,
+  .education {
+    margin-bottom: 0px;
+  }
+  
+  .school-group {
+    display: inline;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  .education,
+  .contact,
+  #skills {
+    text-align: right;
+    margin-bottom: 3rem;
+  }
+
+  .skills-list li {
+    padding-left: 0rem;
+  } 
+
+  .ces {
+    padding-right: 3rem;
+  }
+
+  .work-history {
+    border-left: 1px solid black;
+    padding-left: 3rem;
   }
 }
